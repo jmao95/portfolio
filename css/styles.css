@@ -70,6 +70,12 @@ a {
   padding: 10px 10px 10px 50px;
 }
 
+.info {
+  padding-left: 50px;
+  color: white;
+  font-size: 18px;
+}
+
 .night {
   position: relative;
   width: 100%;
@@ -84,14 +90,13 @@ a {
   left: 50%;
   top: 50%;
   height: 2px;
-  /*Adds trailing line
-  background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));*/
+  background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));
   border-radius: 999px;
   /*Adds glow*/
   -webkit-filter: drop-shadow(0 0 6px #699bff);
           filter: drop-shadow(0 0 6px #699bff);
-  -webkit-animation: shooting 3000ms ease-in-out infinite;
-          animation: shooting 3000ms ease-in-out infinite;
+  -webkit-animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
+          animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
 }
 .shooting_star::before, .shooting_star::after {
   content: '';
@@ -312,7 +317,7 @@ a {
   -webkit-animation-delay: 6192ms;
           animation-delay: 6192ms;
 }
-/*
+
 @-webkit-keyframes tail {
   0% {
     width: 0;
@@ -335,7 +340,7 @@ a {
   100% {
     width: 0;
   }
-}*/
+}
 @-webkit-keyframes shining {
   0% {
     width: 0;
